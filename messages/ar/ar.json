@@ -1,0 +1,32 @@
+{
+  "loading": {
+    "pleaseWait": "جاري التحميل..."
+  },
+  "notFound": {
+    "pageNotFound": "الصفحة غير موجودة",
+    "description": "عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+    "backToHome": "العودة إلى الصفحة الرئيسية"
+  },
+  "home": {
+    "nav": {
+      "home": "الرئيسية",
+      "about": "من نحن",
+      "services": "خدماتنا",
+      "blog": "المدونة",
+      "team": "فريقنا",
+      "contact": "اتصل بنا",
+      "search": "بحث",
+      "searchPlaceholder": "ابحث في المقالات...",
+      "bookAppointment": "احجز موعداً",
+      "menu": "القائمة",
+      "closeMenu": "إغلاق القائمة"
+    },
+    "seeMore": "عرض المزيد"
+  },
+  "navbar": {
+    "home": "الرئيسية"
+  },
+  "product": {
+    "test": "Test Product"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "loading": {
+    "pleaseWait": "Loading..."
+  },
+  "notFound": {
+    "pageNotFound": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist or has been moved.",
+    "backToHome": "Back to Home"
+  },
+  "home": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Our Services",
+      "blog": "Blog",
+      "team": "Our Team",
+      "contact": "Contact",
+      "search": "Search",
+      "searchPlaceholder": "Search articles...",
+      "bookAppointment": "Book Appointment",
+      "menu": "Menu",
+      "closeMenu": "Close menu"
+    },
+    "seeMore": "See more"
+  },
+  "navbar": {
+    "home": "Home"
+  },
+  "product": {
+    "test": "Test Product"
+  }
+}
