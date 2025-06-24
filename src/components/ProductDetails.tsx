@@ -8,27 +8,25 @@ interface ProductDetailsProps {
   locale: string;
 }
 
-export default function ProductDetails({ product, locale }: ProductDetailsProps) {
+export default function ProductDetails({ product }: ProductDetailsProps) {
   const sizes = product.product.variations.filter((v) => v.type === "size").map((v) => v.value);
   const colors = product.product.variations.filter((v) => v.type === "color").map((v) => v.value);
   const [selectedSize, setSelectedSize] = useState(sizes[0] || "");
   const [selectedColor, setSelectedColor] = useState(colors[0] || "");
-  const t = useTranslations();
+  const t = useTranslations("product");
 
   return (
     <div className="max-w-2xl mx-auto py-10 px-4">
       <div className="flex flex-col md:flex-row gap-8 items-start">
-        {/* صورة افتراضية */}
-        <div className="w-full md:w-1/2 flex justify-center items-center bg-gray-100 rounded-lg h-64 mb-4 md:mb-0">
-          <span className="text-gray-300 text-7xl">🖼️</span>
-        </div>
+        {/*Image*/}
+        <div className="w-full md:w-1/2 flex justify-center items-center bg-gray-100 rounded-lg h-64 mb-4 md:mb-0"></div>
         <div className="w-full md:w-1/2">
           <h1 className="text-2xl font-bold mb-2 text-blue-600">{product.name}</h1>
           <p className="text-gray-700 mb-4">{product.description}</p>
           <div className="mb-4">
             <span className="text-lg font-semibold text-blue-600">{product.product.price} $</span>
           </div>
-          {/* الحجم */}
+          {/* size */}
           {sizes.length > 0 && (
             <div className="mb-4">
               <label className="block mb-1 font-medium">{t("size") || "الحجم"}</label>
@@ -50,7 +48,7 @@ export default function ProductDetails({ product, locale }: ProductDetailsProps)
               </div>
             </div>
           )}
-          {/* اللون */}
+          {/* color */}
           {colors.length > 0 && (
             <div className="mb-4">
               <label className="block mb-1 font-medium">{t("color") || "اللون"}</label>

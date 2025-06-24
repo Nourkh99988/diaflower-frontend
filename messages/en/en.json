@@ -25,8 +25,11 @@
   },
   "navbar": {
     "home": "Home"
-  },
-  "product": {
-    "test": "Test Product"
+  },  "product": {
+    "test": "Test Product",
+    "size": "Size",
+    "color": "Color",
+    "selectSize": "Select Size",
+    "selectColor": "Select Color"
   }
 }

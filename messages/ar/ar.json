@@ -27,6 +27,10 @@
     "home": "الرئيسية"
   },
   "product": {
-    "test": "Test Product"
+    "test": "Test Product",
+    "size": "الحجم",
+    "color": "اللون",
+    "selectSize": "اختر الحجم",
+    "selectColor": "اختر اللون"
   }
 }

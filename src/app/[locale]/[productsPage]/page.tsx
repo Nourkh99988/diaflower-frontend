@@ -10,15 +10,10 @@ export async function generateStaticParams() {
   // Fetch the total number of pages from your API
   const response = await fetchFromApi<ProductTranslationResponse>("/products/en");
   const totalPages = response?.pagination?.totalPages || 1;
-
-  // Generate paths for all locales and pages
-  const locales = ["en", "ar"];
   const paths = [];
 
-  for (const locale of locales) {
-    for (let page = 1; page <= totalPages; page++) {
-      paths.push({ locale, productsPage: page.toString() });
-    }
+  for (let page = 1; page <= totalPages; page++) {
+    paths.push({ productsPage: page.toString() });
   }
 
   return paths;
@@ -26,6 +21,7 @@ export async function generateStaticParams() {
 
 // Revalidate every hour (3600 seconds)
 export const revalidate = 3600;
+export const dynamicParams = true;
 
 interface PaginationButtonProps {
   page: number;

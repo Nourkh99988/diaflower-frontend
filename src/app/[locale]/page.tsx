@@ -4,6 +4,7 @@ import { ProductTranslationResponse } from "@/lib/types/prodact";
 import { getTranslations } from "next-intl/server";
 import ProductCard from "@/components/ProductCard";
 import { Link } from "@/i18n/navigation";
+import { DivMotion } from "@/useStyle/UseStyle";
 
 // const getData = async ({ lang }: { lang: string }) => {
 //   try {
@@ -33,7 +34,9 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
     <div className="max-w-5xl mx-auto py-8 px-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} locale={locale} />
+          <DivMotion key={product.id}>
+            <ProductCard product={product} locale={locale} />
+          </DivMotion>
         ))}
       </div>
       {pagination && pagination.page < pagination.totalPages && (
